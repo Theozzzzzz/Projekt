@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "BaggyJeans",   
+        "price": 500,
+        "image" : "https://images.nexusapp.co/assets/0c/dc/db/274420714.jpg"
+    },
+    {
+        "id": 2,
+        "name": "T-shirt",
+        "price": 100,
+        "image" : "https://images.nexusapp.co/assets/0c/dc/db/274420714.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Nittedshirt",
+        "price": 399,
+        "image" :"https://images.nexusapp.co/assets/0c/dc/db/274420714.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Nittedshirt",
+        "price": 200,
+        "image" :"https://images.nexusapp.co/assets/0c/dc/db/274420714.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Nittedshirt",
+        "price": 300,
+        "image" :"https://images.nexusapp.co/assets/0c/dc/db/274420714.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Nittedshirt",
+        "price": 460,
+        "image" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDrKK6nlwTpHfTnkIqQnb8ibxxwsc2mMVmFnN5DaI0Q&s"
+    },
+    {
+        "id": 7,
+        "name": "Nittedshirt",
+        "price": 320,
+        "image" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDrKK6nlwTpHfTnkIqQnb8ibxxwsc2mMVmFnN5DaI0Q&s"
+    },
+    {
+        "id": 8,
+        "name": "Nittedshirt",
+        "price": 400,
+        "image" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDrKK6nlwTpHfTnkIqQnb8ibxxwsc2mMVmFnN5DaI0Q&s"
+    },
+    {
+        "id": 9,
+        "name": "Nittedshirt",
+        "price": 230,
+        "image" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDrKK6nlwTpHfTnkIqQnb8ibxxwsc2mMVmFnN5DaI0Q&s"
+    },
+    {
+        "id": 10,
+        "name": "Nittedshirt",
+        "price": 70,
+        "image" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDrKK6nlwTpHfTnkIqQnb8ibxxwsc2mMVmFnN5DaI0Q&s"
+    },
+    {
+        "id": 11,
+        "name": "Nittedshirt",
+        "price": 600,
+        "image" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDrKK6nlwTpHfTnkIqQnb8ibxxwsc2mMVmFnN5DaI0Q&s"
+    },
+    {
+        "id": 12,
+        "name": "Nittedshirt",
+        "price": 1000,
+        "image" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDrKK6nlwTpHfTnkIqQnb8ibxxwsc2mMVmFnN5DaI0Q&s"
+    }
+]

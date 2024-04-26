@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>   
+<head>
+    <link rel="stylesheet" href="ProdjektHomepage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/fe474f6046.js" crossorigin="anonymous"></script>
+    <style>
+        /* Include the CSS adjustments provided earlier here */
+    </style>
+</head>
+<body>
+    <header class="nav-down">
+        Gojira
+        <button class="menu-btn">Menu</button>
+    </header>
+    <div class="navbar">
+        <div class="navbar-links">
+            <nav>
+            <div class="dropdown Hnavbar">
+                <button class="dropbtn round">Home</button>
+                <!-- Dropdown for Men -->
+                <div class="dropdown Hnavbar">
+                    <button class="dropbtn round">Men</button>
+                    <div class="dropdown-content">
+                        <a href="#">Shirts</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                    </div>
+                </div>
+                <!-- Dropdown for Women -->
+                <div class="dropdown Hnavbar">
+                    <button class="dropbtn round">Women</button>
+                    <div class="dropdown-content">
+                        <a href="#">Shirts</a>
+                        <a href="#">Pants</a>
+                        <a href="#">T-shirts</a>
+                    </div>
+                </div>
+                <!-- Additional dropdowns and links as needed -->
+                <div class="dropdown Hnavbar">
+                    <button class="dropbtn round">Sign up/Log in</button>
+               
+                <div class="dropdown Hnavbar">
+                    <button class="dropbtn round round Hnavbar fa-solid fa-cart-shopping"></button>
+
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        // Include the JavaScript for toggling the menu here
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.navbar-links').classList.toggle('active');
+        });
+    </script>
+    <img class="main-pic" src="Pictures/The background .webp" alt="">
+
+</body>
+</html>
+
+
+<header>
+    <div class="navbar">
+        <nav>
+            <a class="round Hnavbar" href="">Hem</a>
+            <a class="round Hnavbar" href="https://www.instagram.com/hampus_porath/" target="_blank">Socials</a>
+            <a class="round Hnavbar">Sign up/Logga in</a>
+            <div class="container">
+                <header>
+                    <div class="icon-cart">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                        </svg>
+                        <span>0</span>
+                          
+                    </div>
+                </header>
+            </div>
+        </nav>
+    </div>
+        <nav>
+            <div id="collectionnavbar" class="menu-btn">
+                <i class="fa-solid fa-arrow-down"></i>
+                <div class="Hnavbar dropdown-content navbar-links">
+                    <div class="classes">
+                        <h1 class="grid">Men</h1>
+                            <a href="">Shirts</a>
+                            <a href="">Pants</a>
+                            <a href="">Sweater</a>
+                            <a href="#">Shorts</a>
+                    </div>
+                    <div class="classes">
+                        <h2 class="grid">Women</h2>
+                            <a href="#">Shirts</a>
+                            <a href="#">Pants</a>
+                            <a href="#">T-shirts</a>
+                    </div>
+                    <div class="classes">
+                        <h3 class="grid">Accesories</h1>
+                            <a href="">Belt</a>
+                            <a href="">Earing</a>
+                            <a href="">Headwear</a>
+                            <a href="">Armband</a>
+                            <a href="">Neckless</a>
+                            <a href="">Rings</a>
+                    </div>
+                </div>
+        </nav>
+</header>

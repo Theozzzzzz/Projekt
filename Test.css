@@ -1,0 +1,151 @@
+.imgbox {
+  margin: 17.5px;
+  flex-basis: 30%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.imgbox:hover {
+  transform: scale(1.05);
+  z-index: 5;    
+  
+}   
+
+.uniform-height {
+  width: 100%; /* or your specific value */
+  height: 100%;
+  object-fit: cover; /* or 'contain' based on preference */
+}
+
+.supply {
+  width:100%;
+}
+
+.choseWindow {    
+  display: flex;
+  position: absolute;
+  top: 40%;
+  background-color: rgb(181, 192, 208);
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+
+
+
+
+.navbar-links, .navbar-links.active {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  margin-top: -5px;
+}
+
+.menu-btn {
+  /* Style your menu button here */
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+
+.navbar-links {
+  display: none; /* Hidden by default */
+}
+
+.navbar-links.active {
+  display: flex; /* Show when active */
+  flex-direction: column; /* Stack items for mobile */
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+p{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.grid{
+  font-size: 30px;
+}
+/*NAVBARS*/
+.navbar{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #D2E0FB;
+  height: auto;
+
+}
+
+#collectionnavbar{
+  display: flex;
+  background-color: #EED3D9;
+  justify-content: center;
+  width: 10%;
+  margin-left: 5%;
+  border-bottom-right-radius: 50px ;
+  border-bottom-left-radius: 50px;
+  flex-basis: 20%;
+  padding:5px;
+}
+
+
+.dropdown-content {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  background-color: #EED3D9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+  width: 40%;
+  height: 60%;
+  margin-left: 20%;
+}
+
+.dropdown-content a {
+  color: rgb(93, 4, 90);
+  padding : 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+.dropdown-content button{
+  display: block;
+  justify-content: flex-start;
+  flex-basis: 40%;
+  flex-direction: row;
+}
+
+
+#dropdown-products {
+  color: rgb(93, 4, 90);
+  display: none;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(31, 73, 94);  
+  color: white;  
+}
+
+
+
+.Hnavbar{
+  color: rgb(93, 4, 90);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration:none;
+  border-radius: 20px;
+  font-size: 25px;
+  transition: transform 0 ease;
+}
+
+/*SCROLL WINDOW*/
+
+.round{border-radius: 50px;}
