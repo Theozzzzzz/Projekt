@@ -53,7 +53,7 @@ function addCartToHTML(){
                 </div>
                 <div class="quantity">${cart_item.quantity}</div>
                 <div class="returnPrice">
-                    $${product.price * cart_item.quantity}
+                    ${product.price * cart_item.quantity}kr
                 </div>`;
                 listCartHTML.appendChild(newP);
                 totalQuantity = totalQuantity + cart_item.quantity;
@@ -62,11 +62,11 @@ function addCartToHTML(){
         })
     }
     totalQuantityHTML.innerText = totalQuantity;
-    totalPriceHTML.innerText = '$' + totalPrice;
+    totalPriceHTML.innerText = totalPrice + 'kr';
 }
 
 const initApp = async () =>{
-    // get data from json
+    // få data från JSON, await används här för att vänta på att json filen kommmer, den ska inte blocka resten av koden. 
     await fetch('Projektiteminfo.json').then(response => response.json()).then(data => {
         productData = data;
     })

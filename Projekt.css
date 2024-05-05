@@ -4,13 +4,15 @@ body{
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
-.navbar{
+
+nav{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
 }
 .categories{
     display: flex;
-    flex-direction: row;
     margin: 0 0 0 20px;
 }
 
@@ -19,6 +21,13 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
+
+.dropdown-content{
+    display: block;
+    background-color: #eeeee6;
+    width: 13%;
+}
+
 
 .container{
     width: 900px;

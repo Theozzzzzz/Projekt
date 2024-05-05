@@ -2,11 +2,22 @@ let iconCart = document.querySelector('.icon-cart');
 let closeCart = document.querySelector('.close');
 let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct');
-let listCartHTML = document.querySelector('.listCart')
-let iconCartSpan = document.querySelector('.icon-cart span')
+let listCartHTML = document.querySelector('.listCart');
+let iconCartSpan = document.querySelector('.icon-cart span');
+const dropdown = document.querySelectorAll('.dropbtn');
+const dropdownContent = document.getElementById('.myDropdown');
 
 let listProducts = [];
 let carts = {};
+
+
+dropdown.addEventListener('click', () => {
+    if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "block";
+    }
+});
 
 iconCart.addEventListener('click', () =>{
     body.classList.toggle('showCart')
