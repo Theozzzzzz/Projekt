@@ -23,19 +23,55 @@ nav{
 }
 
 .dropdown-content{
-    display: block;
+    display: none;
     background-color: #eeeee6;
     width: 13%;
 }
 
+#dropdown-Color{
+    display: none;
+}
+#dropdown-Brand{
+    display: none;
+}
 
+#brands #color{
+    display: grid;
+}
+
+.dropbtn{
+    padding: 20% 50%;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: whitesmoke;;
+    border-color: #FF71CD;
+    border-width: 3px;
+    color: #4990d8;
+    box-shadow: 3px 4px 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sorter{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+}
+.dropdown{
+    display: block;
+    position: fixed;
+    top: 20%;
+    width: 4%;
+    padding: 20px;
+    margin-left: 2%;
+}
 .container{
     width: 900px;
     max-width: 90vw;
     margin:auto;
     text-align: center;
     padding-top: 10px;
-    transition: transform .1s
+    transition: transform .1s;
 }
 svg{
     width: 30px;
@@ -67,7 +103,7 @@ header .icon-cart span{
 
 .listProduct .item img{
     width: 90%;
-    filter: drop-shadow(0 50px 20px #0009);
+    filter: drop-shadow(0 20px 20px #0009);
 }
 
 .listProduct{
@@ -339,9 +375,6 @@ button:hover{
         width: auto;
     }
     .choseWindow{
-        width: auto;
-    }
-    .dropdown-content{
         width: auto;
     }
 }

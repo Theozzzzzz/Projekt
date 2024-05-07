@@ -4,20 +4,23 @@ let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
-const dropdown = document.querySelectorAll('.dropbtn');
-const dropdownContent = document.getElementById('.myDropdown');
+// const dropdown = document.getElementsById('.dropbtn');
+// const dropdownContent = document.getElementById('myDropdown')
+// const dropdownContentColor = document.getElementsById('.dropdown-Color');
 
 let listProducts = [];
 let carts = {};
 
-
-dropdown.addEventListener('click', () => {
-    if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-    } else {
-        dropdownContent.style.display = "block";
-    }
-});
+// dropdown.forEach(item => {
+//     item.addEventListener('click', () => {
+//         if (dropdownContent.style.display === "block") {
+//             dropdownContent.style.display = "none";
+//         } else {
+//             dropdownContent.style.display = "block";
+//         }
+//     });
+// });
+    
 
 iconCart.addEventListener('click', () =>{
     body.classList.toggle('showCart')
@@ -155,6 +158,8 @@ const changeQuantity = (product_id, type) => {
     addCartToMemory();
     addCartToHTML();
 };
+
+
 
 const initApp = () =>{
     // get data from json
