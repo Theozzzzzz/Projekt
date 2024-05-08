@@ -4,40 +4,40 @@ let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
-// const dropdown = document.getElementsById('.dropbtn');
-// const dropdownContent = document.getElementById('myDropdown')
-// const dropdownContentColor = document.getElementsById('.dropdown-Color');
+const dropdownButtons = document.querySelectorAll('.dropbtn');
+const dropdownContents = document.querySelectorAll('.myDropdown');
 
 let listProducts = [];
 let carts = {};
 
-// dropdown.forEach(item => {
-//     item.addEventListener('click', () => {
-//         if (dropdownContent.style.display === "block") {
-//             dropdownContent.style.display = "none";
-//         } else {
-//             dropdownContent.style.display = "block";
-//         }
-//     });
-// });
-    
+// Loop through each dropdown button and add event listener
+dropdownButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        let dropdownContent = dropdownContents[index];
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    });
+});
 
-iconCart.addEventListener('click', () =>{
+iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
 })
 
-closeCart.addEventListener('click', () =>{
+closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
 })
 
 const addDataToHTML = () => {
     listProductHTML.innerHTML = '';
-    if(listProducts.length > 0){
+    if (listProducts.length > 0) {
         listProducts.forEach(product => {
-            let newProduct  = document.createElement('div');
+            let newProduct = document.createElement('div');
             newProduct.classList.add('item');
             newProduct.dataset.id = product.id;
-            newProduct.innerHTML =`
+            newProduct.innerHTML = `
                 <img src="${product.image}" alt="">
                 <h2>${product.name}</h2>
                 <div class="price">${product.price}kr</div>
@@ -45,15 +45,14 @@ const addDataToHTML = () => {
                     Add To Cart
                 </button>
             `;
-            listProductHTML.appendChild(newProduct);        
-
+            listProductHTML.appendChild(newProduct);
         })
     }
 }
 
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
-    if(positionClick.classList.contains('addCart')){
+    if (positionClick.classList.contains('addCart')) {
         let product_id = positionClick.parentElement.dataset.id;
         addToCart(product_id)
     }
@@ -62,22 +61,19 @@ listProductHTML.addEventListener('click', (event) => {
 let quantity = 0;
 const addToCart = (product_id) => {
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
-    console.log("Position in Cart:", positionThisProductInCart);  // Debug log
     if (carts.length <= 0) {
-        carts = [{product_id: product_id, quantity: 1}];
+        carts = [{ product_id: product_id, quantity: 1 }];
     } else if (positionThisProductInCart < 0) {
-        carts.push({product_id: product_id, quantity: 1});
+        carts.push({ product_id: product_id, quantity: 1 });
     } else {
         carts[positionThisProductInCart].quantity += 1;
     }
     addCartToHTML();
     addCartToMemory();
-    
-    localStorage.setItem('cart', JSON.stringify(listCart))
-};
+}
+
 const addCartToMemory = () => {
-    let test = JSON.parse(localStorage.getItem('cart')).append( { product_id, quantity } )
-    localStorage.setItem('cart', JSON.stringify(test));
+    localStorage.setItem('cart', JSON.stringify(carts));
 }
 
 const addCartToHTML = () => {
@@ -85,16 +81,16 @@ const addCartToHTML = () => {
     let totalQuantity = 0;
     if (carts.length > 0) {
         carts.forEach(cart => {
-            totalQuantity += cart.quantity;  // Correct calculation of total quantity
+            totalQuantity += cart.quantity;
             let newCart = document.createElement('div');
             newCart.classList.add('item');
             newCart.dataset.id = cart.product_id;
             let positionProduct = listProducts.findIndex(value => value.id == cart.product_id);
             let info = listProducts[positionProduct];
-            
+
             if (!info) {
                 console.error("Product info not found for ID:", cart.product_id);
-                return; // Skip this cart item if product info is missing
+                return;
             }
 
             newCart.innerHTML = `
@@ -116,15 +112,12 @@ const addCartToHTML = () => {
             listCartHTML.appendChild(newCart);
         });
     }
-    iconCartSpan.innerHTML = totalQuantity; // Ensure this updates every time the function runs
+    iconCartSpan.innerHTML = totalQuantity;
 }
 
-
-// Listening for clicks on the cart list
 listCartHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
-    // Using closest to find the nearest parent element with 'data-id', more reliable if the HTML structure is complex
-    let product_id = positionClick.closest('.item').dataset.id; // Assuming '.item' is the class of the div that holds the product ID
+    let product_id = positionClick.closest('.item').dataset.id;
     let type;
 
     if (positionClick.classList.contains('minus')) {
@@ -157,17 +150,12 @@ const changeQuantity = (product_id, type) => {
     }
     addCartToMemory();
     addCartToHTML();
-};
+}
 
-
-
-const initApp = () =>{
-    // get data from json
+const initApp = () => {
     fetch('Projektiteminfo.json').then(response => response.json()).then(data => {
         listProducts = data;
-
-        // get cart from memory 
-        if(localStorage.getItem('cart')){
+        if (localStorage.getItem('cart')) {
             carts = JSON.parse(localStorage.getItem('cart'))
             addDataToHTML();
         }
