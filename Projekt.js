@@ -6,9 +6,12 @@ let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
 const dropdownButtons = document.querySelectorAll('.dropbtn');
 const dropdownContents = document.querySelectorAll('.myDropdown');
+let sorter = document.getElementById('sorter')
 
 let listProducts = [];
 let carts = {};
+
+
 
 // Loop through each dropdown button and add event listener
 dropdownButtons.forEach((button, index) => {
@@ -18,12 +21,28 @@ dropdownButtons.forEach((button, index) => {
             dropdownContent.style.display = "none";
         } else {
             dropdownContent.style.display = "block";
+            // let dropContent = document.createElement('div');
+            // dropContent.classList.add('dropbtn')
+            // if(dropContent.classList.add('dropbtn').parentElement() =)
+            //     dropContent.innerHTML = `
+            //     <div class="dropdown-content myDropdown">
+            //         <a class="dropdown-link" href="#">Bape</a>
+            //         <a class="dropdown-link" href="#">Vans</a>
+            //         <a class="dropdown-link" href="#">Nike</a>
+            //         <a class="dropdown-link" href="#">Adidas</a>
+            //     </div>`;
         }
     });
 });
 
 iconCart.addEventListener('click', () => {
-    body.classList.toggle('showCart')
+    let toggleShowCart = body.classList.toggle('showCart')
+    if(toggleShowCart === true){
+        sorter.style.display = "none"
+    }else{
+        sorter.style.display = "grid"
+    }
+
 })
 
 closeCart.addEventListener('click', () => {
@@ -56,7 +75,8 @@ listProductHTML.addEventListener('click', (event) => {
         let product_id = positionClick.parentElement.dataset.id;
         addToCart(product_id)
     }
-})
+}) 
+
 
 let quantity = 0;
 const addToCart = (product_id) => {

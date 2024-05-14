@@ -24,8 +24,13 @@ nav{
 
 .dropdown-content{
     display: none;
-    background-color: #41a6d1;
-    width: 10%;  /* Adjust width to fit within parent container */
+    background-color: rgb(87, 115, 145);
+    width: 100%;  /* Adjust width to fit within parent container */
+    border-radius: 4px;
+}
+.dropdown-link{
+    padding: 3px;
+    color: white;
     text-decoration: none;
 }
 
@@ -42,7 +47,7 @@ nav{
 
 .dropbtn{
     padding: 10px 20px; /* Adjust padding for better alignment */
-    width: 10%;
+    width: 100%;
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
@@ -54,10 +59,17 @@ nav{
     box-shadow: 3px 4px 8px 3px rgba(0, 0, 0, 0.2);
 }
 
-.sorter{
+#sorter{
+    position: fixed;
+    top: 20%;
     display: grid;
     grid-template-rows: repeat(2, auto); /* Adjust to auto to fit content */
     gap: 20px;
+    top: 20%;
+}
+#sorter .container{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
 }
 
 .dropdown{
@@ -315,17 +327,17 @@ body.showCart .container{
     font-size: x-large;
     font-weight: bold;
 }
-/*Criterias of Cloths, Size, Color, Brand*/
+/*FOOTER*/
 
-.criteria{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    position: absolute;
-    right: 5%;
-    top: 120%;
-    height: 10%;
-    width: 20%;
+.footerDiv{
+    position: relative;
+    background-color: rgb(79, 118, 173);
+    bottom: 0;
+    margin-top: 10%;
+    height: 300px;
+    width: 100%;
+    border-top: 10px;
+    border-color: black;
 }
 
 /*Screen movment addaption*/
