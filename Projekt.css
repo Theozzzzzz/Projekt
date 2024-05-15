@@ -120,7 +120,7 @@ header .icon-cart span{
 
 .listProduct .item img{
     width: 90%;
-    filter: drop-shadow(0 20px 20px #0009);
+    filter: drop-shadow(0 10px 10px #0009);
 }
 
 .listProduct{
@@ -140,7 +140,6 @@ header .icon-cart span{
     font-size: large;
 }
 .listProduct .item .price{
-    letter-spacing: 7px;
     font-size: small;
 }
 
@@ -331,14 +330,66 @@ body.showCart .container{
 
 .footerDiv{
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: rgb(79, 118, 173);
     bottom: 0;
     margin-top: 10%;
-    height: 300px;
+    height: 20%;
     width: 100%;
     border-top: 10px;
     border-color: black;
 }
+
+
+.socialmedias{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.legal{
+    font-size: 20px;
+    padding: 20px; 
+}
+
+.colorFooter{
+    color: #eeeee6;
+}
+
+.aboutUs{
+    font-size: 20px;
+    padding: 20px;  
+}
+
+.currency{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.choseCurrency{
+    padding: 20px;
+}
+
+select{
+    background-color: yellowgreen;
+}
+
+.social{
+    font-size: 40px;
+    color: #eeeee6;
+}
+
+.styleFooter{
+    padding: 4px 0 0 3px;
+
+    font-size: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
 
 /*Screen movment addaption*/
 
