@@ -20,18 +20,21 @@ nav{
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
+    color: #4990d8;
 }
 
 .dropdown-content{
     display: none;
-    background-color: rgb(87, 115, 145);
-    width: 100%;  /* Adjust width to fit within parent container */
-    border-radius: 4px;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    width: 250px;  /* Adjust width to fit within parent container */
+    border-radius: 5px;
 }
 .dropdown-link{
     padding: 3px;
-    color: white;
+    color: #4990d8;
     text-decoration: none;
+    font-weight: bold;
 }
 
 #dropdown-Color{
@@ -47,26 +50,27 @@ nav{
 
 .dropbtn{
     padding: 10px 20px; /* Adjust padding for better alignment */
-    width: 100%;
+
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
     font-size: 15px;
     background-color: whitesmoke;
-    border-color: #FF71CD;
+    border-color: #5356FF;
     border-width: 3px;
     color: #4990d8;
     box-shadow: 3px 4px 8px 3px rgba(0, 0, 0, 0.2);
 }
 
 #sorter{
-    position: fixed;
+    position: fixed;    
     top: 20%;
     display: grid;
-    grid-template-rows: repeat(2, auto); /* Adjust to auto to fit content */
+    grid-template-rows: repeat(2, auto); 
     gap: 20px;
-    top: 20%;
+    visibility: visible;
 }
+
 #sorter .container{
     display: grid;
     grid-template-rows: repeat(2,auto);
@@ -74,9 +78,9 @@ nav{
 
 .dropdown{
     display: block;
-    position: relative; /* Change to relative to fit within parent container */
+    position: relative; 
     top: 20%;
-    width: auto; /* Adjust width to fit content */
+    width: 100%;
     padding: 20px;
     margin-left: 2%;
 }
@@ -100,9 +104,11 @@ header{
     justify-content: space-between;
     padding: 20px 0;
 }
+
 header .icon-cart{
     position: relative;
 }
+
 header .icon-cart span{
     display: inline;
     width: 30px;
@@ -127,6 +133,7 @@ header .icon-cart span{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
+    margin: -5px;
 }
 
 .listProduct .item{
@@ -152,36 +159,41 @@ header .icon-cart span{
     border: none;
     cursor: pointer;
 }
-.cartTab{
-    width: 400px;
+#cartTab{
+    width: 26vw;
     background-color: #353432;
     color: #eee;
-    position: fixed;
+    position: sticky;
+    height: 100vh;
+    float: right;
     inset: 0 -400px 0 auto;
-    display: grid;
+    display: none;
     grid-template-rows: 70px 1fr 70px;
     transition: 1s;
+    bottom: 0px;    
 }
-body.showCart .cartTab{
+
+body.showCart #cartTab{
     inset: 0 0 0 auto;
+    display: grid;
 }
 
 body.showCart .container{
-    transform:translateX(-250px);
+    transform:translateX(-10vw);
 }
 
-.cartTab h1{
+#cartTab h1{
     padding: 20px;
     margin: 0;
     font-weight: 300;
 }
 
-.cartTab .btn{
+#cartTab .btn{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.cartTab .btn button{
+#cartTab .btn button{
     background-color: #E8BC0E;
     border: none;
     font-family: Poppins;
@@ -189,15 +201,15 @@ body.showCart .container{
     cursor: pointer;
 }
 
-.cartTab .btn .close{
+#cartTab .btn .close{
     background-color: #eee;
 }
 
-.cartTab .listCart .item img{
+#cartTab .listCart .item img{
     width: 100%;
 }
 
-.cartTab .listCart .item{
+#cartTab .listCart .item{
     display: grid;
     grid-template-columns: 70px 150px 50px 1fr;
     gap: 10px;
@@ -328,7 +340,7 @@ body.showCart .container{
 }
 /*FOOTER*/
 
-.footerDiv{
+#footerDiv{
     position: relative;
     display: flex;
     flex-direction: row;
@@ -336,14 +348,12 @@ body.showCart .container{
     background-color: rgb(79, 118, 173);
     bottom: 0;
     margin-top: 10%;
-    height: 20%;
     width: 100%;
     border-top: 10px;
     border-color: black;
 }
 
-
-.socialmedias{
+.filter{
     font-size: 20px;
     padding: 20px;
 }
@@ -364,15 +374,15 @@ body.showCart .container{
 
 .currency{
     font-size: 20px;
-    padding: 20px;
 }
 
 .choseCurrency{
     padding: 20px;
 }
 
-select{
-    background-color: yellowgreen;
+#Currency{
+    background-color: #eeeee6;
+    margin-top: 10px;
 }
 
 .social{
@@ -382,7 +392,6 @@ select{
 
 .styleFooter{
     padding: 4px 0 0 3px;
-
     font-size: 15px;
 }
 
@@ -390,6 +399,13 @@ a{
     text-decoration: none;
 }
 
+input{
+    padding: 4x;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: whitesmoke¨;
+    border-radius: 3px;
+}
 
 /*Screen movment addaption*/
 

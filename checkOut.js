@@ -62,7 +62,7 @@ function addCartToHTML(){
         })
     }
     totalQuantityHTML.innerText = totalQuantity;
-    totalPriceHTML.innerText = totalPrice + 'kr';
+    totalPriceHTML.innerText = totalPrice + ' kr';
 }
 
 const initApp = async () =>{

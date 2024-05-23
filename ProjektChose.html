@@ -34,61 +34,78 @@
                 <span>0</span>
             </div>
         </header>
-
-        <div class="listProduct">
-            <div class="item">
-            </div>
-        </div>
     </div>
 
     <main>
+        <div>
+            <div class="container">
+                <div class="listProduct">
+                    <div class="item">
+                    </div>
+                </div>
+                
+            </div>
+            <div id="cartTab">
+                <h1>Shopping cart</h1>
+                <div class="listCart"> 
+                </div>
+                <div class="btn">
+                    <button class="close">CLOSE</button>
+                    <button class="checkOut">
+                        <a href="ProjektCheckOut.html">CHECK OUT</a>
+                    </button> 
+                </div>
+            </div>
+        </div>
         <div id="sorter">
-            <div class="dropdown" id="brands">
+            <div class="filter dropdown">
                 <button class="dropbtn">Brands</button>
                 <div class="dropdown-content myDropdown">
                     <a class="dropdown-link" href="#">Bape</a>
                     <a class="dropdown-link" href="#">Vans</a>
                     <a class="dropdown-link" href="#">Nike</a>
+                    <a class="dropdown-link" href="#">Puma</a>
                     <a class="dropdown-link" href="#">Adidas</a>
+                    <a class="dropdown-link" href="#">Stüssy</a>
+                    <a class="dropdown-link" href="#">Lacoste</a>
+                    <a class="dropdown-link" href="#">Gucci</a>
                 </div>
             </div>
 
-            <div class="dropdown" id="color">
+            <div class="filter dropdown">
                 <button class="dropbtn">Colors</button>
                 <div class="dropdown-content myDropdown">
                     <a class="dropdown-link" href="#">Green</a>
                     <a class="dropdown-link" href="#">Blue</a>
                     <a class="dropdown-link" href="#">Black</a>
+                    <a class="dropdown-link" href="#">Red</a>
                     <a class="dropdown-link" href="#">White</a>
+                    <a class="dropdown-link" href="#">Black</a>
+                    <a class="dropdown-link" href="#">Orange</a>
+                    <a class="dropdown-link" href="#">Gold</a>
+                    <a class="dropdown-link" href="#">Silver</a>
+                    <a class="dropdown-link" href="#">Purple</a>
+                    <a class="dropdown-link" href="#">Yellow</a>
+                    <a class="dropdown-link" href="#">Brown</a>
                 </div>
             </div>
 
-            <div class="dropdown" id="size">
+            <div class="filter dropdown">
                 <button class="dropbtn">Size</button>
                 <div class="dropdown-content myDropdown">
+                    <a class="dropdown-link" href="#">XS</a>
                     <a class="dropdown-link" href="#">S</a>
                     <a class="dropdown-link" href="#">M</a>
                     <a class="dropdown-link" href="#">L</a>
+                    <a class="dropdown-link" href="#">XL</a>
+                    <a class="dropdown-link" href="#">XXL</a>
                 </div>
-            </div>
-        </div>
-
-
-        <div class="cartTab">
-            <h1>Shopping cart</h1>
-            <div class="listCart"> 
-            </div>
-            <div class="btn">
-                <button class="close">CLOSE</button>
-                <button class="checkOut">
-                    <a href="ProjektCheckOut.html">CHECK OUT</a>
-                </button> 
             </div>
         </div>
     </main>
 
     <footer>
-        <div class="footerDiv">
+        <div id="footerDiv">
             <div class="aboutUs colorFooter"> About Gojira <br>
                         <a class="styleFooter colorFooter" href="">About us</a> <br>
                         <a class="styleFooter colorFooter" href="">Career</a> <br>
@@ -98,20 +115,22 @@
             <div class="legal colorFooter"> Legal <br>
                 <a class="styleFooter colorFooter" href="">Terms</a> <br>
                 <a class="styleFooter colorFooter" href="">Policy</a> <br>
-                <a class="styleFooter colorFooter" href="">Returns Policy</a>
+                <a class="styleFooter colorFooter" href="">Returns Policy</a> <br>  
+                <a class="styleFooter colorFooter" href="">Cookies</a>
             </div>
 
             <div class="choseCurrency"> 
                 <form action="">
-                    <label class="colorFooter currency" for="fcurrency">Change Currency
-                        <select name="fcurrency" id="Currency">Currency 
+                    <label class="colorFooter currency" for="fcurrency">Change Currency <br>
+                        <select  class="currency"name="fcurrency" id="Currency">Currency 
+                            <option value="Swedish crown, kr">Swedish crown, kr</option>
                             <option value="Yuan">Yuan, ¥</option>
                             <option value="Dollar, $">Dollar, $</option>
                             <option value="Euro, £">Euro, £</option>
-                            <option value="Swedish crown, kr">Swedish crown, kr</option>
                             <option value="Polish złoty, zloty">Polish złoty, zloty</option>
                             <option value="Yen, ¥">Yen, ¥</option>
-                        </select>
+                        </select><br>
+                        <input type="submit" value="Change">
                     </label>
                 </form>
             </div>
@@ -130,9 +149,12 @@
                     <a href=""></a>
                 </i>
                 <div>
-                    <label for="fname">Mail:</label><br>
-                    <input type="text" id="fname" name="fname"><br>
-                    <input type="submit" value="Submit">    
+                    <P>Mail:</P>
+                    <form action="todo">
+                        <textarea name="message" rows="3" cols="40"></textarea>
+                        <br>
+                        <input type="submit" value="Submit">
+                      </form>
                 </div>
             </div>
         </div>

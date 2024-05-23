@@ -6,7 +6,9 @@ let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
 const dropdownButtons = document.querySelectorAll('.dropbtn');
 const dropdownContents = document.querySelectorAll('.myDropdown');
-let sorter = document.getElementById('sorter')
+let sorter = document.getElementById('sorter');
+let foot = document.getElementById('footerDiv');
+let cartTab = document.getElementById('cartTab')
 
 let listProducts = [];
 let carts = {};
@@ -38,15 +40,19 @@ dropdownButtons.forEach((button, index) => {
 iconCart.addEventListener('click', () => {
     let toggleShowCart = body.classList.toggle('showCart')
     if(toggleShowCart === true){
-        sorter.style.display = "none"
+        sorter.style.visibility = "hidden"
+        listProductHTML.style.marginBottom = "-70%";
     }else{
-        sorter.style.display = "grid"
-    }
+        listProductHTML.style.marginBottom = "0%";
+        sorter.style.visibility = "visible"
+    };
 
-})
+});
 
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
+    listProductHTML.style.marginBottom = "0%";
+    sorter.style.visibility = "visible" 
 })
 
 const addDataToHTML = () => {
