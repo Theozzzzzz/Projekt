@@ -4,24 +4,33 @@ let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
-let sorter = document.getElementById('sorter');
 let foot = document.getElementById('footerDiv');
 let cartTab = document.getElementById('cartTab')
 
 let listProducts = [];
 let carts = {};
 
+document.addEventListener("DOMContentLoaded", function() {
+    let sorter = document.getElementById('sorter');
+    var svgElement = document.getElementById('sorter-btn');
 
+    svgElement.addEventListener('click', function() {
+        if (sorter.style.display === 'none') {
+            sorter.style.display = 'flex';
+        } else {
+            sorter.style.display = 'none';
+        }
+    });
+});
 
 
 document.addEventListener('DOMContentLoaded', function() {
     var dropdownButtons = document.querySelectorAll(".dropbtn");
     var dropdownContents = document.querySelectorAll(".dropdown-content");
 
-    dropdownButtons.forEach((button, index) => {
+    dropdownButtons.forEach((button, index1) => {
         button.addEventListener('click', function() {
-            let dropdownContent = dropdownContents[index];
-            // Toggla klassen 'show' för att visa/dölja dropdown-innehåll
+            let dropdownContent = dropdownContents[index1];
             dropdownContent.classList.toggle('show');
         });
     });
@@ -36,7 +45,6 @@ iconCart.addEventListener('click', () => {
         listProductHTML.style.marginBottom = "-45%";
         sorter.style.visibility = "visible"
     };
-
 });
 
 closeCart.addEventListener('click', () => {
@@ -44,6 +52,15 @@ closeCart.addEventListener('click', () => {
     listProductHTML.style.marginBottom = "-45%";
     sorter.style.visibility = "visible" 
 })
+
+document.addEventListener('DOMContentLoaded', function(){
+    const images = document.querySelectorAll('img');
+    images.forEach((img,index2) =>{
+        if (index2 >= 8) {
+            img.setAttribute('loading', 'lazy');
+        }
+    });
+});
 
 const addDataToHTML = () => {
     listProductHTML.innerHTML = '';
@@ -53,7 +70,7 @@ const addDataToHTML = () => {
             newProduct.classList.add('item');
             newProduct.dataset.id = product.id;
             newProduct.innerHTML = `
-                <img src="${product.image}" alt="">
+                <img src="${product.image}" alt="" loading="lazy">
                 <h2>${product.name}</h2>
                 <div class="price">${product.price}kr</div>
                 <button class="addCart">
@@ -63,7 +80,7 @@ const addDataToHTML = () => {
             listProductHTML.appendChild(newProduct);
         })
     }
-}
+}   
 
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;

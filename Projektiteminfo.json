@@ -136,5 +136,11 @@
         "name": "Nittedshirt",
         "price": 302,
         "image" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDrKK6nlwTpHfTnkIqQnb8ibxxwsc2mMVmFnN5DaI0Q&s"
+    },
+    {
+        "id": 24,
+        "name": "BaggyJeans",   
+        "price": 500,
+        "image" : "https://images.nexusapp.co/assets/0c/dc/db/274420714.jpg"
     }
 ]
