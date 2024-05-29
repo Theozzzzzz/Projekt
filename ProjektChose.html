@@ -26,6 +26,11 @@
                 <div class="categories">
                     <a class="fa-solid fa-magnifying-glass decoration search"></a>
                 </div>
+                <div class="categories sorterBtn">
+                    <i class="fa-solid fa-gear decoration">
+                        <a href="https://www.google.se/?hl=sv&safe=active&ssui=on"></a>
+                    </i>
+                </div>
             </nav>
             <div class="icon-cart">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -51,16 +56,17 @@
                 </div>
                 <div class="btn">
                     <button class="close">CLOSE</button>
-                    <button class="checkOut">
-                        <a href="ProjektCheckOut.html">CHECK OUT</a>
+                    <button>
+                        <a href="ProjektCheckOut.html" class= "checkOut">CHECK OUT</a>
                     </button> 
                 </div>
             </div>
         </div>
         <div id="sorter">
-            <div class="filter dropdown">
+            <div class="dropdown">
                 <button class="dropbtn">Brands</button>
                 <div class="dropdown-content myDropdown">
+                    <a class="dropdown-link" href="#">Converse</a>
                     <a class="dropdown-link" href="#">Bape</a>
                     <a class="dropdown-link" href="#">Vans</a>
                     <a class="dropdown-link" href="#">Nike</a>
@@ -72,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="filter dropdown">
+            <div class="dropdown">
                 <button class="dropbtn">Colors</button>
                 <div class="dropdown-content myDropdown">
                     <a class="dropdown-link" href="#">Green</a>
@@ -93,6 +99,7 @@
             <div class="filter dropdown">
                 <button class="dropbtn">Size</button>
                 <div class="dropdown-content myDropdown">
+                    <a class="dropdown-link" href="#">XXS</a>
                     <a class="dropdown-link" href="#">XS</a>
                     <a class="dropdown-link" href="#">S</a>
                     <a class="dropdown-link" href="#">M</a>
@@ -106,13 +113,13 @@
 
     <footer>
         <div id="footerDiv">
-            <div class="aboutUs colorFooter"> About Gojira <br>
+            <div class="aboutUs colorFooter mediafooter"> About Gojira <br>
                         <a class="styleFooter colorFooter" href="">About us</a> <br>
                         <a class="styleFooter colorFooter" href="">Career</a> <br>
                         <a class="styleFooter colorFooter" href="">Climate for us</a><br>
                         <a class="styleFooter colorFooter" href="">FAQs</a>
             </div>
-            <div class="legal colorFooter"> Legal <br>
+            <div class="legal colorFooter mediafooter"> Legal <br>
                 <a class="styleFooter colorFooter" href="">Terms</a> <br>
                 <a class="styleFooter colorFooter" href="">Policy</a> <br>
                 <a class="styleFooter colorFooter" href="">Returns Policy</a> <br>  
@@ -135,7 +142,7 @@
                 </form>
             </div>
 
-            <div class="socialmedias colorFooter"> Contact us <br>
+            <div class="socialmedias colorFooter styleFooter"> Contact us <br>
                 <i class="fa-brands fa-square-instagram social">
                     <a href=""></a>
                 </i>
@@ -148,13 +155,16 @@
                 <i class="fa-brands fa-square-pinterest social">
                     <a href=""></a>
                 </i>
-                <div>
+                <div class="mediafooter">
                     <P>Mail:</P>
                     <form action="todo">
                         <textarea name="message" rows="3" cols="40"></textarea>
                         <br>
                         <input type="submit" value="Submit">
                       </form>
+                </div>
+                <div class="colorFooter styleFooter moreInfo">
+                    Click here for more information!
                 </div>
             </div>
         </div>

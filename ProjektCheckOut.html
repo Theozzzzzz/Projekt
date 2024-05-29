@@ -7,65 +7,127 @@
     <link rel="stylesheet" href="Projekt.css">
 </head>
 <body>  
-    
-    <div class="container">
-        <div class="checkoutLayout">
-            <div class="returnCart">
-                <a href="ProjektChose.html">Keep Shopping</a>
-                <h1>List Product in Cart</h1>
-                <div class="list">
-                    <div class="item">
+    <main>
+        <div class="container">
+            <div class="checkoutLayout checkoutHeight">
+                <div class="returnCart">
+                    <a href="ProjektChose.html">Keep Shopping</a>
+                    <h1>List Product in Cart</h1>
+                    <div class="list">
+                        <div class="item">
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="right">
-                <h1>CHECKOUT</h1>
-                <div class="form">
-                    <div class="group">
-                        <label for="">FULL NAME</label>
-                        <input type="text" name="" id="">
+                
+                <div class="right">
+                    <h1>CHECKOUT</h1>
+                    <div class="form">
+                        <div class="group">
+                            <label for="">FULL NAME</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="group">
+                            <label for="">Phone number</label>
+                            <input id="phone-input" type="text" name="" id="">
+                        </div>
+                        <div class="group">
+                            <label for="">Address</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="group">
+                            <label for="">Country</label>
+                            <select name="" id="">
+                                <option value="">Choose..</option>
+                                <option value="london">London</option>
+                            </select>
+                        </div>
+                        <div class="group">
+                            <label for="">City</label>
+                            <select name="" id="">
+                                <option value="">Choose..</option>
+                                <option value="london">London</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="group">
-                        <label for="">Phone number</label>
-                        <input id="phone-input" type="text" name="" id="">
+                    <div class="return">
+                        <div class="row">
+                            <div>Total Quantity</div>
+                            <div class="totalQuantity">60</div>
+                        </div>
+                        <div class="row">
+                            <div>Total Price</div>
+                            <div id="totalprice">$60</div>
+                        </div>
                     </div>
-                    <div class="group">
-                        <label for="">Address</label>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div class="group">
-                        <label for="">Country</label>
-                        <select name="" id="">
-                            <option value="">Choose..</option>
-                            <option value="london">London</option>
-                        </select>
-                    </div>
-                    <div class="group">
-                        <label for="">City</label>
-                        <select name="" id="">
-                            <option value="">Choose..</option>
-                            <option value="london">London</option>
-                        </select>
-                    </div>
+                    <button class="buttonCheckout">
+                        CHECKOUT
+                    </button>
                 </div>
-                <div class="return">
-                    <div class="row">
-                        <div>Total Quantity</div>
-                        <div class="totalQuantity">60</div>
-                    </div>
-                    <div class="row">
-                        <div>Total Price</div>
-                        <div id="totalprice">$60</div>
-                    </div>
-                </div>
-                <button class="buttonCheckout">
-                    CHECKOUT
-                </button>
             </div>
         </div>
-    </div>
+    </main>
+        
 
-    <script src="checkOut.js"></script>
+    <footer>
+        <div id="footerDiv">
+            <div class="aboutUs colorFooter mediafooter"> About Gojira <br>
+                        <a class="styleFooter colorFooter" href="">About us</a> <br>
+                        <a class="styleFooter colorFooter" href="">Career</a> <br>
+                        <a class="styleFooter colorFooter" href="">Climate for us</a><br>
+                        <a class="styleFooter colorFooter" href="">FAQs</a>
+            </div>
+            <div class="legal colorFooter mediafooter"> Legal <br>
+                <a class="styleFooter colorFooter" href="">Terms</a> <br>
+                <a class="styleFooter colorFooter" href="">Policy</a> <br>
+                <a class="styleFooter colorFooter" href="">Returns Policy</a> <br>  
+                <a class="styleFooter colorFooter" href="">Cookies</a>
+            </div>
+
+            <div class="choseCurrency"> 
+                <form action="">
+                    <label class="colorFooter currency" for="fcurrency">Change Currency <br>
+                        <select  class="currency"name="fcurrency" id="Currency">Currency 
+                            <option value="Swedish crown, kr">Swedish crown, kr</option>
+                            <option value="Yuan">Yuan, ¥</option>
+                            <option value="Dollar, $">Dollar, $</option>
+                            <option value="Euro, £">Euro, £</option>
+                            <option value="Polish złoty, zloty">Polish złoty, zloty</option>
+                            <option value="Yen, ¥">Yen, ¥</option>
+                        </select><br>
+                        <input type="submit" value="Change">
+                    </label>
+                </form>
+            </div>
+
+            <div class="socialmedias colorFooter styleFooter"> Contact us <br>
+                <i class="fa-brands fa-square-instagram social">
+                    <a href=""></a>
+                </i>
+                <i class="fa-brands fa-square-facebook social">
+                    <a href=""></a>
+                </i>
+                <i class="fa-brands fa-x-twitter social">
+                    <a href=""></a>
+                </i>
+                <i class="fa-brands fa-square-pinterest social">
+                    <a href=""></a>
+                </i>
+                <div class="mediafooter">
+                    <P>Mail:</P>
+                    <form action="todo">
+                        <textarea name="message" rows="3" cols="40"></textarea>
+                        <br>
+                        <input type="submit" value="Submit">
+                      </form>
+                </div>
+                <div class="colorFooter styleFooter moreInfo">
+                    Click here for more information!
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+        <script src="checkOut.js"></script>
 </body>
 </html>     

@@ -4,8 +4,6 @@ let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
-const dropdownButtons = document.querySelectorAll('.dropbtn');
-const dropdownContents = document.querySelectorAll('.myDropdown');
 let sorter = document.getElementById('sorter');
 let foot = document.getElementById('footerDiv');
 let cartTab = document.getElementById('cartTab')
@@ -15,25 +13,17 @@ let carts = {};
 
 
 
-// Loop through each dropdown button and add event listener
-dropdownButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        let dropdownContent = dropdownContents[index];
-        if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-        } else {
-            dropdownContent.style.display = "block";
-            // let dropContent = document.createElement('div');
-            // dropContent.classList.add('dropbtn')
-            // if(dropContent.classList.add('dropbtn').parentElement() =)
-            //     dropContent.innerHTML = `
-            //     <div class="dropdown-content myDropdown">
-            //         <a class="dropdown-link" href="#">Bape</a>
-            //         <a class="dropdown-link" href="#">Vans</a>
-            //         <a class="dropdown-link" href="#">Nike</a>
-            //         <a class="dropdown-link" href="#">Adidas</a>
-            //     </div>`;
-        }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdownButtons = document.querySelectorAll(".dropbtn");
+    var dropdownContents = document.querySelectorAll(".dropdown-content");
+
+    dropdownButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+            let dropdownContent = dropdownContents[index];
+            // Toggla klassen 'show' för att visa/dölja dropdown-innehåll
+            dropdownContent.classList.toggle('show');
+        });
     });
 });
 
@@ -43,7 +33,7 @@ iconCart.addEventListener('click', () => {
         sorter.style.visibility = "hidden"
         listProductHTML.style.marginBottom = "-70%";
     }else{
-        listProductHTML.style.marginBottom = "0%";
+        listProductHTML.style.marginBottom = "-45%";
         sorter.style.visibility = "visible"
     };
 
@@ -51,7 +41,7 @@ iconCart.addEventListener('click', () => {
 
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
-    listProductHTML.style.marginBottom = "0%";
+    listProductHTML.style.marginBottom = "-45%";
     sorter.style.visibility = "visible" 
 })
 
